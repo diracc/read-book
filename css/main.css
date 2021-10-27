@@ -45,7 +45,7 @@ h1 {
 
 #logo {
     background-color: hsla(0, 0%, 0%, .2);
-    border: 3px solid hsla(0, 0%, 0%, .2);
+    border: 2px solid hsla(0, 0%, 0%, .2);
     display: flex;
     margin: 2em auto;
     max-width: 21em;
