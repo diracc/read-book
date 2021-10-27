@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read book</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="img/logo.png">
+            <h1>Primal books</h1>
+        </div>
+        <div id="grid">
+            <div class="card">
+                <a href="#/we-want-to-live"><img src="img/cover/we-want-to-live.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/we-want-to-live">We Want To Live</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">368 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/we-want-to-live">Read</a></li>
+                        <li><a href="books/we-want-to-live.pdf" download="we-want-to-live.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/the-recipe-for-living-without-disease"><img src="img/cover/the-recipe-for-living-without-disease.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/the-recipe-for-living-without-disease">The Recipe for Living Without Disease</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">214 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/the-recipe-for-living-without-disease">Read</a></li>
+                        <li><a href="books/the-recipe-for-living-without-disease.pdf" download="the-recipe-for-living-without-disease.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/benefits-of-raw-eggs-and-cheese"><img src="img/cover/benefits-of-raw-eggs-and-cheese.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/benefits-of-raw-eggs-and-cheese">Benefits of Raw Eggs & Cheese</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">124 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/benefits-of-raw-eggs-and-cheese">Read</a></li>
+                        <li><a href="books/benefits-of-raw-eggs-and-cheese.pdf" download="benefits-of-raw-eggs-and-cheese.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/questions-and-answers-2nd-edition"><img src="img/cover/questions-and-answers-2nd-edition.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/questions-and-answers-2nd-edition">Questions and Answers, 2nd Edition</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">680 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/questions-and-answers-2nd-edition">Read</a></li>
+                        <li><a href="books/questions-and-answers-2nd-edition.pdf" download="questions-and-answers-2nd-edition.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/questions-and-answers"><img src="img/cover/questions-and-answers.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/questions-and-answers">Questions and Answers</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">320 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/questions-and-answers">Read</a></li>
+                        <li><a href="books/questions-and-answers.pdf" download="questions-and-answers.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/beneficial-home-baths"><img src="img/cover/beneficial-home-baths.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/beneficial-home-baths">Beneficial Home Baths</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">41 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/beneficial-home-baths">Read</a></li>
+                        <li><a href="books/beneficial-home-baths.pdf" download="beneficial-home-baths.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#/early-training-with-aajonus"><img src="img/cover/early-training-with-aajonus.png"></a>
+                <div class="card-body">
+                    <div class="card-title"><a href="#/early-training-with-aajonus">Early Training With Aajonus</a></div>
+                    <div>Aajonus Vonderplanitz</div>
+                    <div class="small">292 Pages</div>
+                    <ul class="card-buttons">
+                        <li><a href="#/early-training-with-aajonus">Read</a></li>
+                        <li><a href="books/early-training-with-aajonus.pdf" download="early-training-with-aajonus.pdf">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="top-nav" class="hidden">
+            <a id="back" href="">Home</a> <div id="book-title"></div>
+        </div>
+
+        <div id="book" class="hidden">
+            <div class="book-controls">
+                <button id="prev">&laquo; Previous</button>
+                <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+                <button id="next">Next &raquo;</button>
+            </div>
+            <canvas id="page"></canvas>
+            <div class="book-controls">
+                <button id="download-page">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M10.5.5l.354-.354L10.707 0H10.5v.5zm3 3h.5v-.207l-.146-.147-.354.354zm-4 9l-.354-.354A.5.5 0 009.5 13v-.5zm3 1.5h-10v1h10v-1zM2.5 1h8V0h-8v1zm7.646-.146l3 3 .708-.708-3-3-.708.708zM2.5 14a.5.5 0 01-.5-.5H1A1.5 1.5 0 002.5 15v-1zm10 1a1.5 1.5 0 001.5-1.5h-1a.5.5 0 01-.5.5v1zM2.5 0A1.5 1.5 0 001 1.5h1a.5.5 0 01.5-.5V0zM12 12H9.5v1H12v-1zm-2.146.854l1.792-1.793-.707-.707-1.793 1.792.708.708zM10.793 9H10.5v1h.293V9zM10.5 9A1.5 1.5 0 009 10.5h1a.5.5 0 01.5-.5V9zm1.5 1.207C12 9.54 11.46 9 10.793 9v1c.114 0 .207.093.207.207h1zm-.354.854c.227-.227.354-.534.354-.854h-1a.207.207 0 01-.06.147l.706.707zM13 3.5v10h1v-10h-1zm-11 10v-12H1v12h1z" fill="currentColor"></path></svg>
+                    Download Page</button>
+                <a id="download-book" href="" download="">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1.5.5V0a.5.5 0 00-.5.5h.5zm0 13H1a.5.5 0 00.5.5v-.5zM4 0v15h1V0H4zM1.5 1h10V0h-10v1zM13 2.5v9h1v-9h-1zM11.5 13h-10v1h10v-1zm-9.5.5V.5H1v13h1zm11-2a1.5 1.5 0 01-1.5 1.5v1a2.5 2.5 0 002.5-2.5h-1zM11.5 1A1.5 1.5 0 0113 2.5h1A2.5 2.5 0 0011.5 0v1zM7 5h4V4H7v1z" fill="currentColor"></path></svg>
+                    Download Book
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/js/pdf.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
