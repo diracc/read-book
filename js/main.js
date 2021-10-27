@@ -18,6 +18,7 @@ const context = $page.getContext("2d");
 const scale = 1.5;
 const books = ["we-want-to-live", "the-recipe-for-living-without-disease", "benefits-of-raw-eggs-and-cheese", "questions-and-answers-2nd-edition", "questions-and-answers", "beneficial-home-baths", "early-training-with-aajonus"];
 let currentBookIndex = -1;
+let activeBookTitle = "";
 let pdfDoc = null;
 let pageRendering = false;
 let pageNumberPending = null;
@@ -64,7 +65,7 @@ function handleRouting() {
         
         for (let i = 0; i < $titleLinks.length; i++) {
             if (book === getSlug($titleLinks[i].href)) {
-                activeBook = $titleLinks[i].innerText;
+                activeBookTitle = $titleLinks[i].innerText;
                 showBook();
                 return true;
             }
@@ -83,7 +84,7 @@ function selectBook() {
             $element = $element.parentNode;
         }
 
-        activeBook = $element.querySelector(".card-title a").innerText;
+        activeBookTitle = $element.querySelector(".card-title a").innerText;
         showBook();
     }
 }
@@ -99,9 +100,10 @@ function showBook() {
     initializeDocument();
     changeVisibility("hide", $logo, $grid);
     changeVisibility("show", $topNav, $book);
-    $bookTitle.innerText = activeBook;
+    $bookTitle.innerText = activeBookTitle;
     $downloadBook.href = getFilePath();
     $downloadBook.download = `${books[currentBookIndex]}.pdf`;
+    document.title = `${activeBookTitle} · Read book`;
 }
 
 function getFilePath() {
@@ -187,6 +189,7 @@ function showGrid(e) {
     pdfDoc = null;
     currentPageNumber = 1;
     window.location.hash = "";
+    document.title = "Read book";
 }
 
 function downloadPage() {
