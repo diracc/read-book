@@ -43,8 +43,6 @@ $prev.addEventListener("click", prevPage);
 $next.addEventListener("click", nextPage);
 $downloadPage.addEventListener("click", downloadPage);
 
-// window.addEventListener("hashchange", handleHashChange);
-
 /* Functions */
 function getPageNumber() {
     const page =  window.location.hash.match(/page-(\d+)/);
