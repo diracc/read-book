@@ -13,14 +13,9 @@ html {
 body {
     background-color: #f5f5fb;
     color: #454545;
+    font: 1rem Arial, Helvetica, sans-serif;
     line-height: 1.4;
     padding-bottom: 15em;
-}
-
-body,
-button,
-input {
-    font: 1rem Arial, Helvetica, sans-serif;
 }
 
 a,
