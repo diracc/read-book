@@ -262,3 +262,13 @@ blockquote p::first-letter,
         display: none;
     }
 }
+
+@media (max-width: 500px) {
+    article {
+        padding: 5em 1em;
+    }
+
+    .small p {
+        max-width: 75%;
+    }
+}
