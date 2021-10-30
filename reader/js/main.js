@@ -52,15 +52,13 @@ $lineHeightButtons[1].addEventListener("click", adjustStyle);
 $contentWidthButtons[0].addEventListener("click", adjustStyle);
 $contentWidthButtons[1].addEventListener("click", adjustStyle);
 
-alert(properties["line-height"])
-alert(getPropertyValue("line-height"))
-
 
 /* Init */
-// fns["themes"]();
-// fns["font-size"]();
-// fns["line-height"]();
-// fns["content-width"]();
+fns["themes"]();
+fns["font-size"]();
+fns["line-height"]();
+fns["content-width"]();
+
 
 /* Functions */
 function getPropertyValue(property, element = document.body) {
