@@ -16,7 +16,7 @@ const $contentWidthValue = $contentWidth.getElementsByTagName("span")[0];
 const properties = {
     "themes": [localStorage.getItem("themes") || "light"],
     "font-size": [getPropertyValue("font-size"), 1, 9, 40],
-    "line-height": [getPropertyValue("line-height") / 16, .1, 1, 2.4],
+    "line-height": [getPropertyValue("line-height"), 1.6, 16, 38.4],
     "content-width": [getPropertyValue("max-width", $container) / 16, 5, 35]
 };
 const fns = {
@@ -28,8 +28,8 @@ const fns = {
         $fontSizeValue.innerText = `${fontSize}px`;
     },
     "line-height": function (lineHeight = properties["line-height"][0]) {
-        document.body.style.lineHeight = `${lineHeight}`;
-        $lineHeightValue.innerText = `${lineHeight}`;
+        document.body.style.lineHeight = `${lineHeight}px`;
+        $lineHeightValue.innerText = `${lineHeight / 16}`;
     },
     "content-width": function (contentWidth = properties["content-width"][0]) {
         $container.style.maxWidth = `${contentWidth}em`;
