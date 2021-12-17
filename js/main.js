@@ -160,8 +160,6 @@ function queueRenderPage(pageNumber) {
 }
 
 function prevPage() {
-    console.log("PREV");
-
     if (currentPageNumber <= 1) {
         return;
     }
@@ -172,8 +170,6 @@ function prevPage() {
 }
 
 function nextPage() {
-    console.log("NEXT");
-
     if (currentPageNumber >= pdfDoc.numPages) {
         return;
     }
