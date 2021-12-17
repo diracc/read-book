@@ -23,6 +23,7 @@ let pdfDoc = null;
 let pageRendering = false;
 let pageNumberPending = null;
 let currentPageNumber = getPageNumber() || 1;
+let pageChanged = false;
 pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/js/pdf.worker.js";
 
 /* Event Listeners */
@@ -41,6 +42,7 @@ for (let i = 0; i < $cards.length; i++) {
 $back.addEventListener("click", showGrid);
 $prev.addEventListener("click", prevPage);
 $next.addEventListener("click", nextPage);
+window.addEventListener("hashchange", changePage);
 $downloadPage.addEventListener("click", downloadPage);
 
 /* Functions */
@@ -153,25 +155,38 @@ function queueRenderPage(pageNumber) {
         pageNumberPending = pageNumber;
     } else {
         renderPage(pageNumber);
+        pageChanged = false;
     }
 }
 
 function prevPage() {
+    console.log("PREV");
+
     if (currentPageNumber <= 1) {
         return;
     }
 
     currentPageNumber--;
+    pageChanged = true;
     queueRenderPage(currentPageNumber);
 }
 
 function nextPage() {
+    console.log("NEXT");
+
     if (currentPageNumber >= pdfDoc.numPages) {
         return;
     }
 
     currentPageNumber++;
+    pageChanged = true;
     queueRenderPage(currentPageNumber);
+}
+
+function changePage() {
+    if (!pageChanged) {
+        queueRenderPage(getPageNumber());
+    }
 }
 
 function resetCanvas() {
